@@ -28,12 +28,13 @@ publishing {
                 }
         }
     }
+    
     publications {
         gpr(MavenPublication) {
          //Del tutorial https://docs.gradle.org/current/userguide/publishing_maven.html#publishing_maven
         
-            groupId = 'us.mitfs.samples'
-            artifactId = 'a4i'
+            //groupId = 'us.mitfs.samples'
+            //artifactId = 'a4i'
             version = '1.0.0'
 
             from components.java
@@ -66,3 +67,8 @@ tasks.named('test') {
     // Use JUnit Platform for unit tests.
     useJUnitPlatform()
 }
+
+//tasks.named('publish') {
+//    group = 'publishing'
+//    description = 'Publishes artifacts to the local Maven repository.'
+//}
