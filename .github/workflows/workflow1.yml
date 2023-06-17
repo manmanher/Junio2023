@@ -19,7 +19,7 @@ jobs:
         id: pasoBuild
         run: |
           chmod +x gradlew        
-          ./gradlew build
+          ./gradlew assemble
       - name: mensaje con el uvus
         run: echo "manmanher"
          
@@ -27,8 +27,7 @@ jobs:
    runs-on: ubuntu-latest
    env:
       GITHUB_LOGIN: ${{ github.actor }}
-      GITHUB_PACKAGES: ${{ secrets.GITHUB_TOKEN }}
-      GITHUB_OAUTH: ${{ secrets.GITHUB_TOKEN }}
+      GITHUB_PACKAGES: ${{ secrets.PASSWORD }}
    needs: Build    
    steps:
       - name: Clonando el repositorio y estableciendo el espacio de trabajo
